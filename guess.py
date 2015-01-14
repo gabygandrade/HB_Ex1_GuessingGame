@@ -1,12 +1,4 @@
 
-print("Hello. What's your name?")
-name = raw_input()
-
-import random
-prizenum = random.randrange(1,101)
-print prizenum
-
-print "Hi %s, I have a number between 1 and 100 for you to guess, what is your guess?" % name
 
 # Our first attempt at the guessing game, less efficient code, commented out upon update
 # while guess != prizenum:
@@ -31,6 +23,15 @@ print "Hi %s, I have a number between 1 and 100 for you to guess, what is your g
 #     else:
 #         print "Congrats %s! You guessed our number in %d tries!" % (name, numtries)
 #         break
+
+print("Hello. What's your name?")
+name = raw_input()
+
+import random
+prizenum = random.randrange(1,101)
+print prizenum
+
+print "Hi %s, I have a number between 1 and 100 for you to guess, what is your guess?" % name
     
 def game():
     numtries = 0
@@ -52,3 +53,15 @@ def game():
             print("Sorry. You must enter a number as a guess. Please guess again.")
 
 game()
+
+
+# Needswork. See Github Exc 01 Instructions
+# print "Do you want to play again?"
+# answer = raw_input()
+
+# if answer == "Yes":
+    
+#     game()
+# else:
+#     print "Thanks for playing."
+
