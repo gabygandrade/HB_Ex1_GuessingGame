@@ -38,13 +38,16 @@ def game():
         try:
             guess = int(float(raw_input()))
             numtries += 1
-            if guess > prizenum:
-                print "Your guess is too high. Guess again"
-            elif guess < prizenum:
-                print "Your guess is too low. Guess again"
+            if guess > 100 or guess < 1:
+                print "We said BETWEEN 1-100! Try guessing again."
             else:
-                print "Congrats %s! You guessed our number in %d tries!" % (name, numtries)
-                break
+                if guess > prizenum:
+                    print "Your guess is too high. Guess again"
+                elif guess < prizenum:
+                    print "Your guess is too low. Guess again"
+                else:
+                    print "Congrats %s! You guessed our number in %d tries!" % (name, numtries)
+                    break
         except ValueError:
             print("Sorry. You must enter a number as a guess. Please guess again.")
 
